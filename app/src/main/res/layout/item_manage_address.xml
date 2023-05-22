@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvAddress1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Address1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddress1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/green"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toEndOf="@+id/tvAddress1"
+        app:layout_constraintTop_toTopOf="@+id/tvAddress1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslAddress"
+        style="@style/SelectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/corner_gray_bg"
+        app:layout_constraintStart_toStartOf="@+id/tvAddress1"
+        app:layout_constraintEnd_toEndOf="@+id/tvEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress1">
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        />
+
+        <TextView
+            android:id="@+id/tvAddressDecription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:lineSpacingExtra="@dimen/_1sdp"
+            android:text="Plot 85 Trade Center Trade Center District,\nDudhai-United Arab Emirates\n+917 894346653"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvUserName"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

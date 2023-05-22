@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CheckOutFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvCheckOut"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/roundedCardView">
+
+        <ImageView
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Checkout"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvCheckOut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/cslCheckOutBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvCheckOut">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_50sdp">
+
+            <TextView
+                android:id="@+id/tvServiceAddress"
+                style="@style/normalTextMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Service Address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cslAddAdress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/corner_gray_bg"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvServiceAddress">
+
+            <TextView
+                android:id="@+id/tvNoAddressSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Address Selected"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add +"
+                app:layout_constraintTop_toTopOf="@+id/tvNoAddressSelected"
+                app:layout_constraintStart_toEndOf="@+id/tvNoAddressSelected"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNoAddressSelected"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/green"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslServiceList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/corner_gray_bg"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cslAddAdress">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCheckOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvPayment"
+                style="@style/normalTextMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Payment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cslServiceList" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslCashArrival"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/corner_gray_bg"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPayment">
+
+                <ImageView
+                    android:id="@+id/ivMoney"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:src="@drawable/ic_money"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCashOnArrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Cash on Arival"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivMoney"
+                    app:layout_constraintStart_toEndOf="@+id/ivMoney"
+                    app:layout_constraintTop_toTopOf="@+id/ivMoney" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslCreditCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/corner_gray_bg"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cslCashArrival">
+
+                <ImageView
+                    android:id="@+id/ivCreditCard"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:src="@drawable/ic_add_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCreditCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Credit/Depit Card"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivCreditCard"
+                    app:layout_constraintStart_toEndOf="@+id/ivCreditCard"
+                    app:layout_constraintTop_toTopOf="@+id/ivCreditCard" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslGooglePay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/corner_gray_bg"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cslCreditCard">
+
+                <ImageView
+                    android:id="@+id/ivGooglePay"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:src="@drawable/ic_payment"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvGooglePay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Google Pay"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivGooglePay"
+                    app:layout_constraintStart_toEndOf="@+id/ivGooglePay"
+                    app:layout_constraintTop_toTopOf="@+id/ivGooglePay" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cslCheckOutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/nsvCheckOut">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Total"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_14ssp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="AED 250"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTotal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlaceOrder"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Place Order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvAED"
+                app:layout_constraintStart_toStartOf="@+id/tvTotal"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AirServiceFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvAirServices"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/roundedCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivAirServicesBack"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAirServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Air Services"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivAirServicesBack"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.542" />
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_shopping_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvAirServices"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvAirServices">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivACServices"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/networkerror"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvACservices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="A/C Services"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivACServices" />
+
+            <ImageView
+                android:id="@+id/ivFavOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favout"
+                app:layout_constraintBottom_toBottomOf="@+id/tvACservices"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toEndOf="@+id/tvACservices"
+                app:layout_constraintTop_toTopOf="@id/tvACservices" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="4.4"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvACservices" />
+
+            <ImageView
+                android:id="@+id/ivStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:src="@drawable/ic_star_rate"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+                app:layout_constraintStart_toEndOf="@id/tvRating"
+                app:layout_constraintTop_toTopOf="@+id/tvRating" />
+
+            <TextView
+                android:id="@+id/tvNumberofUnits"
+                style="@style/normalTextMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Number of units"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslNumberofUnits"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/corner_gray_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNumberofUnits">
+
+
+                <TextView
+                    android:id="@+id/Number_of_units_spinner"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:elevation="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:hint="1 AC Unit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAEDNumberBilling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:hint="AED 250"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Number_of_units_spinner"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivBillingDropDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_drop_down_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toEndOf="@+id/tvAEDNumberBilling"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvSelectSlot"
+                style="@style/normalTextMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Select Slot"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cslNumberofUnits" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslCalnder"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/corner_gray_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectSlot">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            
+            <TextView
+                android:id="@+id/tvCalnerSlot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24-05-2023"
+                app:layout_constraintTop_toBottomOf="@+id/cslCalnder"
+                app:layout_constraintStart_toStartOf="@+id/cslCalnder"
+                app:layout_constraintEnd_toEndOf="@+id/cslCalnder"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cslTime"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/corner_gray_bg"
+                app:layout_constraintStart_toEndOf="@+id/cslCalnder"
+                app:layout_constraintTop_toBottomOf="@+id/tvSelectSlot">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_clock"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTimeSlot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.9.00 am - 11.00 am"
+                app:layout_constraintTop_toBottomOf="@+id/cslTime"
+                app:layout_constraintStart_toStartOf="@+id/cslTime"
+                app:layout_constraintEnd_toEndOf="@+id/cslTime"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            <TextView
+                android:id="@+id/tvAirServiceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@drawable/corner_gray_bg"
+                android:fontFamily="@font/poppins_regular"
+                android:lineSpacingExtra="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:justificationMode="inter_word"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cslCalnder" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddCard"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="@dimen/_14sdp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Add to Cart"
+        app:cornerRadius="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:icon="@drawable/ic_shopping_cart"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

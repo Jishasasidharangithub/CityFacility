@@ -1,0 +1,128 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CityFacility" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/blue</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/blue</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--CARD CORNER-->
+    <style name="roundedCardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">40dp</item>
+        <item name="cornerSizeBottomLeft">40dp</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+    </style>
+
+    <!--ITEM CLICK EFFECT-->
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">@color/rippleColor</item>
+    </style>
+
+
+
+
+
+    <!--TEXT SIZE AND FONTS-->
+    <style name="extraLargeText">
+        <item name="android:textSize">@dimen/_22sdp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="largeTextSemiBold">
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="toolbarTextSemiBold">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="toolbarTextMedium">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="toolbarTextRegular">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="normalTextRegular">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+    <style name="normalTextMedium">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+    <style name="normalTextSemiBold">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="smallTextMedium">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="smallTextSemiBold">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="smallTextRegular">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="verySmallTextMedium">
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="verySmallTextSemiBold">
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="verySmallTextRegular">
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ButtonCorner">
+        <item name="cornerSizeTopRight">15dp</item>
+        <item name="cornerSizeTopLeft">15dp</item>
+        <item name="cornerSizeBottomRight">15dp</item>
+        <item name="cornerSizeBottomLeft">15dp</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+    </style>
+
+
+
+
+
+</resources>

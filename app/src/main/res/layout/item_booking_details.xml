@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMySubscriptionItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/corner_gray_bg">
+
+            <TextView
+                android:id="@+id/tvACservices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="A/C Services"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/tvNumberofunits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:elevation="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="1 AC Unit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvACservices" />
+            <TextView
+                android:id="@+id/tvAED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AED 250"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toTopOf="@+id/tvNumberofunits"
+                app:layout_constraintBottom_toBottomOf="@+id/tvNumberofunits"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_14ssp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

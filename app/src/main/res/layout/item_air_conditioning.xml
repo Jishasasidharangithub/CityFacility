@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvAirConditioningItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/corner_gray_bg"
+            >
+
+            <TextView
+                android:id="@+id/tvACService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="A/C Service"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvStartingFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Starting \nfrom"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvACService" />
+
+            <TextView
+                android:id="@+id/tvAED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="AED 250"
+                android:textColor="@color/blue"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartingFrom" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:elevation="@dimen/_10sdp"
+        android:src="@drawable/ic_arrow_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/cvAirConditioningItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvAirConditioningItem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

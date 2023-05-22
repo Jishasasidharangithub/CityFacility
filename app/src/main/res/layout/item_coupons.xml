@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslAddressLine1"
+        style="@style/SelectableItemBackground"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/corner_gray_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivCoupons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_coupon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/tvFlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flat 30% OFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCoupons"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="@dimen/_14ssp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cslCouponsNumber"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFlat"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/doted">
+
+            <TextView
+                android:id="@+id/tvCouponsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="G5674872632"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cslCouponsNumber"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Copy or Apply"
+            app:cornerRadius="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

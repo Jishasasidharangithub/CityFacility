@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.cityfacility.ui.fragment.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cityfacility.ui.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.cityfacility.ui.fragment.SplashFragment"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cityfacility.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home"
+        >
+
+        <action
+            android:id="@+id/action_homeFragment_to_ourServicesFragment"
+            app:destination="@id/ourServicesFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_basicFragment"
+            app:destination="@id/basicFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/ourServicesFragment"
+        android:name="com.example.cityfacility.ui.fragment.OurServicesFragment"
+        android:label="fragment_our_services"
+        tools:layout="@layout/fragment_our_services" />
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.cityfacility.ui.fragment.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.cityfacility.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profileFragment_to_myBookingFragment"
+            app:destination="@id/myBookingFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_myPaymentFragment"
+            app:destination="@id/myPaymentFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_mySubscriptionFragment"
+            app:destination="@id/mySubscriptionFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_manageAddressFragmentt"
+            app:destination="@id/manageAddressFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_editFragment"
+            app:destination="@id/editFragment"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.example.cityfacility.ui.fragment.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/requestServiceFragment"
+        android:name="com.example.cityfacility.ui.fragment.RequestServiceFragment"
+        android:label="fragment_request_service"
+        tools:layout="@layout/fragment_request_service" />
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.example.cityfacility.ui.fragment.FAQFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.example.cityfacility.ui.fragment.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.cityfacility.ui.fragment.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/basicFragment"
+        android:name="com.example.cityfacility.ui.fragment.BasicFragment"
+        android:label="fragment_basic"
+        tools:layout="@layout/fragment_basic" />
+    <fragment
+        android:id="@+id/addAddressFragment2"
+        android:name="com.example.cityfacility.ui.fragment.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.cityfacility.ui.fragment.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/couponsFragment"
+        android:name="com.example.cityfacility.ui.fragment.CouponsFragment"
+        android:label="fragment_coupons"
+        tools:layout="@layout/fragment_coupons" />
+    <fragment
+        android:id="@+id/termsConditionFragment"
+        android:name="com.example.cityfacility.ui.fragment.TermsConditionFragment"
+        android:label="fragment_terms_condition"
+        tools:layout="@layout/fragment_terms_condition" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.cityfacility.ui.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.example.cityfacility.ui.fragment.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.cityfacility.ui.fragment.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.cityfacility.ui.fragment.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/maintenancePackageFragment"
+        android:name="com.example.cityfacility.ui.fragment.MaintenancePackageFragment"
+        android:label="fragment_maintenance_package"
+        tools:layout="@layout/fragment_maintenance_package" />
+    <fragment
+        android:id="@+id/airConditioningFragment"
+        android:name="com.example.cityfacility.ui.fragment.AirConditioningFragment"
+        android:label="fragment_air_conditioning"
+        tools:layout="@layout/fragment_air_conditioning" />
+    <fragment
+        android:id="@+id/airServiceFragment"
+        android:name="com.example.cityfacility.ui.fragment.AirServiceFragment"
+        android:label="fragment_air_service"
+        tools:layout="@layout/fragment_air_service" />
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.cityfacility.ui.fragment.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" />
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.example.cityfacility.ui.fragment.OffersFragment"
+        android:label="fragment_offers"
+        tools:layout="@layout/fragment_offers" />
+    <fragment
+        android:id="@+id/mySubscriptionFragment"
+        android:name="com.example.cityfacility.ui.fragment.MySubscriptionFragment"
+        android:label="fragment_my_subscription"
+        tools:layout="@layout/fragment_my_subscription" />
+    <fragment
+        android:id="@+id/myPaymentFragment"
+        android:name="com.example.cityfacility.ui.fragment.MyPaymentFragment"
+        android:label="fragment_my_payment"
+        tools:layout="@layout/fragment_my_payment" />
+    <fragment
+        android:id="@+id/manageAddressFragment"
+        android:name="com.example.cityfacility.ui.fragment.ManageAddressFragment"
+        android:label="fragment_manage_address"
+        tools:layout="@layout/fragment_manage_address" />
+    <fragment
+        android:id="@+id/myBookingFragment"
+        android:name="com.example.cityfacility.ui.fragment.MyBookingFragment"
+        android:label="fragment_my_booking"
+        tools:layout="@layout/fragment_my_booking" />
+    <fragment
+        android:id="@+id/bookingDetailsFragment"
+        android:name="com.example.cityfacility.ui.fragment.BookingDetailsFragment"
+        android:label="fragment_booking_details"
+        tools:layout="@layout/fragment_booking_details" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.cityfacility.ui.fragment.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+
+</navigation>

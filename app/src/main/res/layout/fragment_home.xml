@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvHome"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/roundedCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="39dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="34dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.67"
+                app:layout_constraintStart_toEndOf="@+id/ivMenu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="34dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_notifications"
+                app:layout_constraintStart_toEndOf="@+id/ivSearch"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="34dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_shopping_cart"
+                app:layout_constraintStart_toEndOf="@+id/ivNotification"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvHiUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Hi User"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMenu" />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHiUser" />
+
+            <Spinner
+                android:id="@+id/location_spinner"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tvHiUser"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvHome"
+        android:layout_marginBottom="@dimen/_55sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:cardElevation="@dimen/_3sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpSlide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/llSlideIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:elevation="@dimen/_12sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/cvSlider"
+                app:layout_constraintStart_toStartOf="@+id/cvSlider"
+                app:layout_constraintTop_toBottomOf="@+id/cvSlider" />
+
+            <TextView
+                android:id="@+id/tvOurServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Our Services"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llSlideIndicator" />
+
+            <TextView
+                android:id="@+id/tvViewall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="View all"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.955"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llSlideIndicator" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_12ssp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/tvViewall"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvOurServices"
+                app:layout_constraintTop_toBottomOf="@+id/tvOurServices"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvSpecialPackages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Special Packages"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvSet" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPackages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="72dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/tvSpecialPackages"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvSpecialPackages"
+                app:layout_constraintTop_toBottomOf="@+id/tvSpecialPackages" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

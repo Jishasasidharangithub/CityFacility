@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cslBasic"
+        style="@style/SelectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="@drawable/corner_gray_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvACservice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A/C Service"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_14ssp"/>
+
+        <TextView
+            android:id="@+id/tvStartingFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="starting from"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvACservice"
+            android:layout_marginStart="@dimen/_15sdp"
+            />
+        <TextView
+            android:id="@+id/tvAED200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AED 300"
+            app:layout_constraintTop_toTopOf="@+id/tvStartingFrom"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStartingFrom"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toEndOf="@+id/tvStartingFrom"
+            android:fontFamily="@font/poppins_semi_bold"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favfill"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

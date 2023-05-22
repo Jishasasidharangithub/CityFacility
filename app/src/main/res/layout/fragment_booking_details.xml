@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.BookingDetailsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMyBooking"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/roundedCardView">
+
+        <ImageView
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="My Booking"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMyBookingItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvMyBooking">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/corner_gray_bg">
+
+
+            <TextView
+                android:id="@+id/tvBookingNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Booking No:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBookingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_80sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Completed"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvBookingNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvBookingNumber"
+                app:layout_constraintTop_toTopOf="@+id/tvBookingNumber" />
+
+            <TextView
+                android:id="@+id/tvBookingId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="0548"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBookingNumber" />
+
+            <ImageView
+                android:id="@+id/ivBookingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBookingId" />
+
+            <TextView
+                android:id="@+id/tvBookingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="04-05-2021"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBookingDate"
+                app:layout_constraintStart_toEndOf="@+id/ivBookingDate"
+                app:layout_constraintTop_toBottomOf="@+id/tvBookingId" />
+
+            <ImageView
+                android:id="@+id/ivBookingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/ic_clock"
+                app:layout_constraintBottom_toBottomOf="@+id/tvBookingDate"
+                app:layout_constraintStart_toEndOf="@+id/tvBookingDate"
+                app:layout_constraintTop_toTopOf="@+id/tvBookingDate" />
+
+            <TextView
+                android:id="@+id/tvBookingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="09.00 am - 11.00 am"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/ivBookingDate"
+                app:layout_constraintStart_toEndOf="@+id/ivBookingTime"
+                app:layout_constraintTop_toTopOf="@id/ivBookingTime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvServiceAddress"
+        style="@style/normalTextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Service Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvMyBookingItem" />
+
+    <TextView
+        android:id="@+id/tvServiceAddressDecription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:lineSpacingExtra="@dimen/_1sdp"
+        android:text="Plot 85 Trade Center Trade Center District,\nDudhai-United Arab Emirates\n+917 894346653"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/tvServiceAddress"
+        app:layout_constraintTop_toBottomOf="@+id/tvServiceAddress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMybookingDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvServiceAddressDecription"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Total Amount"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvMybookingDetails" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="AED 425"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotalAmount"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalAmount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

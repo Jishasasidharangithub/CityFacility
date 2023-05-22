@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.BackToHomeFragment">
+
+    <ImageView
+        android:id="@+id/ivThankYou"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="236dp"
+        android:src="@drawable/ic_thank_you"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvThankYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank you for \nyour order"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivThankYou"
+        android:textColor="@color/blue"
+        style="@style/largeTextSemiBold"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <TextView
+        android:id="@+id/tvConformationMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvThankYou"
+        android:layout_marginTop="@dimen/_10sdp"
+        style="@style/smallTextRegular"
+        android:textColor="@color/custTextgray"
+        android:text="conformation mail will send after the\napproval of admin"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackToHome"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_55sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Back To Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:cornerRadius="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConformationMail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
